@@ -64,7 +64,34 @@ void SystemClock_Config(void);
 /* USER CODE END PFP */
 
 /* USER CODE BEGIN 0 */
-
+// |U|V|W
+//5|+|-|0
+//4|+|0|-
+//6|0|+|-
+//2|-|+|0
+//3|-|0|+
+//1|0|-|+
+void motor_run(void)
+{
+  uint8_t hall_read = 0;
+  float ADC_Value = 0;
+  switch(hall_read)
+  {
+    case 1:
+    {
+      //U+ V- W0
+      HAL_TIM_PWM_Stop(&htim1,TIM_CHANNEL_3); //W相不发波
+      HAL_TIMEx_PWMN_Stop(&htim1,TIM_CHANNEL_3);
+      
+      TIM1->CCR1 = ADC_Value*1000/4096;
+      HAL_TIM_PWM_Start(&htim1,TIM_CHANNEL_1); //直接操作CCR寄存器来改变占空比
+      
+      TIM1->CCR2 = ADC_Value*1000/4096;
+      HAL_TIM_PWM_Start(&htim1,TIM_CHANNEL_2); //发互补PWM
+    }break;
+    default:break;
+  }
+}
 /* USER CODE END 0 */
 
 int main(void)

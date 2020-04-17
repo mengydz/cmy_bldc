@@ -120,6 +120,7 @@ int main(void)
   MX_GPIO_Init();
   MX_TIM1_Init();
   MX_TIM3_Init();
+  MX_TIM2_Init();
 
   /* USER CODE BEGIN 2 */
   HAL_TIMEx_HallSensor_Start_IT(&htim3);
@@ -133,7 +134,23 @@ int main(void)
   /* USER CODE END WHILE */
 
   /* USER CODE BEGIN 3 */
-
+//    if(HAL_GPIO_ReadPin(GPIOB,GPIO_PIN_6) == GPIO_PIN_RESET)
+//    {
+//     HAL_GPIO_TogglePin(LED_GPIO_Port, LED_Pin); 
+//    }else
+//    {
+//     HAL_GPIO_TogglePin(LED_GPIO_Port, LED_Pin); 
+//    }
+//    if(HAL_GPIO_ReadPin(GPIOB,GPIO_PIN_7) == GPIO_PIN_RESET)
+//    {
+//     HAL_GPIO_TogglePin(LED_GPIO_Port, LED_Pin); 
+//    }else
+//    {
+//     HAL_GPIO_TogglePin(LED_GPIO_Port, LED_Pin); 
+//    }
+//    
+      HAL_GPIO_TogglePin(LED_GPIO_Port, LED_Pin); 
+   HAL_Delay(100);
   }
   /* USER CODE END 3 */
 

@@ -47,6 +47,12 @@
 
 /* Private define ------------------------------------------------------------*/
 
+#define HAL_A_Pin GPIO_PIN_0
+#define HAL_A_GPIO_Port GPIOA
+#define HAL_B_Pin GPIO_PIN_1
+#define HAL_B_GPIO_Port GPIOA
+#define HAL_C_Pin GPIO_PIN_2
+#define HAL_C_GPIO_Port GPIOA
 #define LED_Pin GPIO_PIN_13
 #define LED_GPIO_Port GPIOB
 

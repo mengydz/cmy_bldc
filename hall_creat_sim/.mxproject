@@ -1,7 +1,7 @@
 [PreviousGenFiles]
-HeaderPath=C:/Users/cmy/Desktop/cmy_bldc/hall_creat/Inc
+HeaderPath=C:/Users/cmy/Desktop/cmy_bldc/hall_creat_sim/Inc
 HeaderFiles=gpio.h;tim.h;stm32f1xx_it.h;stm32f1xx_hal_conf.h;main.h;
-SourcePath=C:/Users/cmy/Desktop/cmy_bldc/hall_creat/Src
+SourcePath=C:/Users/cmy/Desktop/cmy_bldc/hall_creat_sim/Src
 SourceFiles=gpio.c;tim.c;stm32f1xx_it.c;stm32f1xx_hal_msp.c;main.c;
 
 [PreviousLibFiles]
